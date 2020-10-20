@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <link rel="stylesheet" href="./public/styles.css" />
+  </head>
+  <body>
+    <section class="section1">
+      <main class="container">
+        <div class="box">
+          <h1>Students</h1>
+          <form class="main-form" action="/student/add" method="POST">
+            <label for="fname"> First Name </label>
+            <input name="fname" type="text" placeholder="First Name" />
+            <label for="mname"> Middle Name </label>
+            <input name="mname" type="text" placeholder="Middle Name" />
+            <label for="lname"> Last Name </label>
+            <input name="lname" type="text" placeholder="Last Name" />
+            <label for="number"> Phone Number </label>
+            <input name="number" type="number" placeholder="Phone Number" />
+            <label for="address"> Address </label>
+            <input name="address" type="text" placeholder="Address" />
+            <label for="selects">Course & Section</label>
+            <div name="selects" class="selects">
+              <select name="course" id="course">
+                <option value="BSIT">BSIT</option>
+                <option value="BSCS">BSCS</option>
+              </select>
+              <select name="college" id="college">
+                <option value="CCIT">CCIT</option>
+              </select>
+              <select name="section" id="section">
+                <option value="3A">3A</option>
+                <option value="3B">3B</option>
+                <option value="3C">3C</option>
+              </select>
+            </div>
+            <label for="studentid"> Student ID </label>
+            <input name="studentid" type="number" placeholder="Student ID" />
+            <input type="submit" value="Submit" />
+          </form>
+        </div>
+      </main>
+    </section>
+  </body>
+</html>
