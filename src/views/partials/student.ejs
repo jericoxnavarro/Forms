@@ -1,0 +1,47 @@
+<section id="student-section" class="student-section">
+  <main class="container">
+    <div class="box">
+      <h1>Students</h1>
+      <form class="main-form" id="studentform" method="POST">
+        <label for="fname"> First Name </label>
+        <input id="fname" name="fname" type="text" placeholder="First Name" />
+        <label for="mname"> Middle Name </label>
+        <input id="mname" name="mname" type="text" placeholder="Middle Name" />
+        <label for="lname"> Last Name </label>
+        <input id="lname" name="lname" type="text" placeholder="Last Name" />
+        <label for="number"> Phone Number </label>
+        <input
+          id="number"
+          name="number"
+          type="number"
+          placeholder="Phone Number"
+        />
+        <label for="address"> Address </label>
+        <input id="address" name="address" type="text" placeholder="Address" />
+        <label for="selects">Course & Section</label>
+        <div name="selects" class="selects">
+          <select id="course" name="course" id="course">
+            <option value="BSIT">BSIT</option>
+            <option value="BSCS">BSCS</option>
+          </select>
+          <select id="college" name="college" id="college">
+            <option value="CCIT">CCIT</option>
+          </select>
+          <select id="section" name="section" id="section">
+            <option value="3A">3A</option>
+            <option value="3B">3B</option>
+            <option value="3C">3C</option>
+          </select>
+        </div>
+        <label for="studentid"> Student ID </label>
+        <input
+          id="studentid"
+          name="studentid"
+          type="number"
+          placeholder="Student ID"
+        />
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+  </main>
+</section>

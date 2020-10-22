@@ -25,98 +25,237 @@ body {
   height: 100vh;
   width: 100vw;
 
+  .navbar {
+    height: 100%;
+    width: 70px;
+    position: fixed;
+    background-color: #004e9a;
+    color: white;
+    transition: width 600ms ease;
+
+    .box-logo {
+      @include flex(row, center);
+      background-color: $bg3;
+      width: 100%;
+      height: 70px;
+      margin-bottom: 30px;
+      .logo {
+        position: fixed;
+        @include flex(column, center);
+        height: 100%;
+        width: 70px;
+        font-size: 45px;
+        color: $primary;
+        transition: 600ms;
+      }
+      .logo-text {
+        @include flex(column, center);
+        height: 100%;
+        width: 70%;
+        font-weight: 900;
+        font-size: 40px;
+        transform: translate(-100px);
+        transition: 600ms;
+        margin-right: auto;
+      }
+    }
+    .nav {
+      width: 100%;
+
+      .nav-items {
+        width: 100%;
+        cursor: pointer;
+        @include flex(row, center);
+        justify-content: flex-start;
+        i {
+          @include flex(column, center);
+          height: 70px;
+          width: 70px;
+          font-size: 35px;
+        }
+        .navtext {
+          height: 100%;
+          width: 100%;
+          margin-left: 20px;
+          display: none;
+          transition: 600ms;
+          opacity: 0;
+          transition: opacity 600ms;
+        }
+        &:hover {
+          background-color: $bg2;
+          i {
+            transform: scale(1.3);
+          }
+        }
+      }
+    }
+
+    &:hover {
+      width: 250px;
+
+      .navtext {
+        opacity: 1 !important;
+        display: inline !important;
+      }
+
+      .logo {
+        transform: translate(70px);
+      }
+      .logo-text {
+        transform: translate(0px);
+      }
+
+      i {
+        margin-left: 20px;
+        width: 30%;
+      }
+    }
+  }
+
   .container {
     @include flex(row, center);
     height: 100%;
     width: 100%;
-    padding: 20px 100px;
+    padding: 20px 50px;
+    padding-left: 120px;
   }
-
+  .box {
+    height: 95%;
+    width: 40%;
+    background-color: $secondary;
+    @include flex(column, center);
+    padding: 50px 70px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1),
+      0 8px 16px rgba(255, 255, 255, 0.1);
+  }
+  h1 {
+    color: white;
+    font-weight: 900;
+    font-size: 35px;
+  }
   section {
     height: 100%;
     width: 100%;
+    background-color: $primary;
+  }
+  label {
+    color: white;
+    font-weight: 700;
+    font-size: 17px;
+    margin-bottom: 2px;
+    margin-top: 10px;
+  }
+  input {
+    width: 100%;
+    height: 45px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    outline: none;
+    border: 1px solid $primary;
+    font-size: 14px;
+    font-weight: 300;
+    color: $primary;
+  }
+  input:focus {
+    border: 2px solid $primary;
+  }
+  .main-form {
+    @include flex(column, flex-start);
+    height: 100%;
+    width: 100%;
+    align-items: flex-start;
+  }
+  input[type="submit"] {
+    margin-top: 10px;
+    height: 50px;
+    width: 40%;
+    align-self: center;
+    background-color: $bg3;
+    outline: none;
+    border: none;
+    color: white;
+    font-weight: 900;
+    font-size: 17px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+  }
+  input[type="submit"]:hover {
+    transform: scale(1.1);
+  }
+  select {
+    height: 45px;
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid $primary;
+    outline: none;
+    background-color: white;
+    padding: 10px 10px;
   }
 
-  .section1 {
-    background-color: $primary;
+  .student-section {
+    .selects {
+      width: 100%;
+      @include flex(row, center);
 
-    .box {
-      height: 95%;
-      width: 40%;
-      background-color: $secondary;
-      @include flex(column, center);
-      padding: 50px 70px;
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1),
-        0 8px 16px rgba(255, 255, 255, 0.1);
-
-      h1 {
-        color: white;
-        font-weight: 900;
-        font-size: 35px;
-      }
-      .main-form {
-        @include flex(column, center);
-        height: 100%;
+      select {
+        height: 45px;
         width: 100%;
-        align-items: flex-start;
-
-        label {
-          color: white;
-          font-weight: 700;
-          font-size: 17px;
-          margin-bottom: 2px;
-          margin-top: 10px;
-        }
-        input {
-          width: 100%;
-          height: 45px;
-          padding: 10px 20px;
-          border-radius: 8px;
-          outline: none;
-          border: 1px solid $primary;
-          font-size: 14px;
-          font-weight: 300;
-          color: $primary;
-        }
-        input:focus {
-          border: 2px solid $primary;
-        }
-        .selects {
-          width: 100%;
-          @include flex(row, center);
-
-          select {
-            height: 45px;
-            width: 100%;
-            margin-right: 10px;
-            border-radius: 8px;
-            border: 1px solid $primary;
-            outline: none;
-            background-color: white;
-          }
-          select:nth-child(3) {
-            margin-right: 0px;
-          }
-        }
-        input[type="submit"] {
-          margin-top: 10px;
-          height: 50px;
-          width: 40%;
-          align-self: center;
-          background-color: $bg3;
-          outline: none;
-          border: none;
-          color: white;
-          font-weight: 900;
-          font-size: 17px;
-          cursor: pointer;
-          transition: 0.3s ease-in-out;
-        }
-        input[type="submit"]:hover {
-          transform: scale(1.1);
-        }
+        margin-right: 10px;
+        border-radius: 8px;
+        border: 1px solid $primary;
+        outline: none;
+        background-color: white;
+        padding: 10px 10px;
       }
+      select:nth-child(3) {
+        margin-right: 0px;
+      }
+    }
+  }
+
+  .instructor-section {
+    display: none;
+    h1 {
+      margin-bottom: 20px;
+    }
+    input[type="submit"] {
+      margin-top: 30px;
+    }
+  }
+
+  .subjects-section {
+    display: none;
+    h1 {
+      margin-bottom: 20px;
+    }
+    input[type="submit"] {
+      margin-top: 30px;
+    }
+  }
+
+  .grades-section {
+    display: none;
+    .grades {
+      width: 100%;
+      @include flex(row, center);
+
+      .gradebox {
+        width: 100%;
+        margin-right: 10px;
+        margin-top: 15px;
+      }
+
+      .gradebox:nth-child(3) {
+        margin-right: 0px;
+      }
+    }
+    h1 {
+      margin-bottom: 20px;
+    }
+    input[type="submit"] {
+      margin-top: 30px;
     }
   }
 }

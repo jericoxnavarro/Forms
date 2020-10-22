@@ -1,0 +1,89 @@
+<section id="grades-section" class="grades-section">
+  <main class="container">
+    <div class="box">
+      <h1>Grades</h1>
+      <form class="main-form" id="gradesform" method="POST">
+        <label for="studentid-grade">Student ID</label>
+        <select
+          id="studentid-grade"
+          name="studentid-grade"
+          id="studentid-grade"
+        >
+          <% student.forEach(function (students) { %>
+          <option value="<%= students.student_id %>">
+            <%= students.student_id %>
+          </option>
+          <% }) %>
+        </select>
+        <label for="subjectid-grade">Subject ID</label>
+        <select
+          id="subjectid-grade"
+          name="subjectid-grade"
+          id="subjectid-grade"
+        >
+          <% subject.forEach(function (subjects) { %>
+          <option value="<%= subjects.subject_id %>">
+            <%= subjects.subject_id %>
+          </option>
+          <% }) %>
+        </select>
+        <label for="instructorid-grade">Instructor ID</label>
+        <select
+          id="instructorid-grade"
+          name="instructorid-grade"
+          id="instructorid-grade"
+        >
+          <% instructor.forEach(function (instructors) { %>
+          <option value="<%= instructors.instructor_id %>">
+            <%= instructors.instructor_id %>
+          </option>
+          <% }) %>
+        </select>
+        <div class="grades">
+          <div class="gradebox">
+            <label for="midterm"> Midterm </label>
+            <input
+              id="midterm"
+              name="midterm"
+              type="text"
+              placeholder="Midterm Grade"
+            />
+          </div>
+          <div class="gradebox">
+            <label for="final"> Final </label>
+            <input
+              id="final"
+              name="final"
+              type="text"
+              placeholder="Final Grade"
+            />
+          </div>
+          <div class="gradebox">
+            <label for="remarks"> Remarks </label>
+            <input
+              id="remarks"
+              name="remarks"
+              type="text"
+              placeholder="Remarks"
+            />
+          </div>
+        </div>
+        <label for="semester"> Semester </label>
+        <input
+          id="semester"
+          name="semester"
+          type="text"
+          placeholder="Semester"
+        />
+        <label for="schoolyear"> School Year </label>
+        <input
+          id="schoolyear"
+          name="schoolyear"
+          type="text"
+          placeholder="School Year"
+        />
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+  </main>
+</section>

@@ -2,8 +2,7 @@
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
 }
 
@@ -12,85 +11,154 @@ body {
   width: 100vw;
 }
 
-body .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
+body .navbar {
+  height: 100%;
+  width: 70px;
+  position: fixed;
+  background-color: #004e9a;
+  color: white;
+  transition: width 600ms ease;
+}
+
+body .navbar .box-logo {
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  background-color: #ea4492;
+  width: 100%;
+  height: 70px;
+  margin-bottom: 30px;
+}
+
+body .navbar .box-logo .logo {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  width: 70px;
+  font-size: 45px;
+  color: #041b2d;
+  transition: 600ms;
+}
+
+body .navbar .box-logo .logo-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  width: 70%;
+  font-weight: 900;
+  font-size: 40px;
+  transform: translate(-100px);
+  transition: 600ms;
+  margin-right: auto;
+}
+
+body .navbar .nav {
+  width: 100%;
+}
+
+body .navbar .nav .nav-items {
+  width: 100%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+body .navbar .nav .nav-items i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 70px;
+  width: 70px;
+  font-size: 35px;
+}
+
+body .navbar .nav .nav-items .navtext {
   height: 100%;
   width: 100%;
-  padding: 20px 100px;
+  margin-left: 20px;
+  display: none;
+  transition: 600ms;
+  opacity: 0;
+  transition: opacity 600ms;
 }
 
-body section {
+body .navbar .nav .nav-items:hover {
+  background-color: #ff9cda;
+}
+
+body .navbar .nav .nav-items:hover i {
+  transform: scale(1.3);
+}
+
+body .navbar:hover {
+  width: 250px;
+}
+
+body .navbar:hover .navtext {
+  opacity: 1 !important;
+  display: inline !important;
+}
+
+body .navbar:hover .logo {
+  transform: translate(70px);
+}
+
+body .navbar:hover .logo-text {
+  transform: translate(0px);
+}
+
+body .navbar:hover i {
+  margin-left: 20px;
+  width: 30%;
+}
+
+body .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
   height: 100%;
   width: 100%;
+  padding: 20px 50px;
+  padding-left: 120px;
 }
 
-body .section1 {
-  background-color: #041b2d;
-}
-
-body .section1 .box {
+body .box {
   height: 95%;
   width: 40%;
   background-color: #004e9a;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   padding: 50px 70px;
   border-radius: 8px;
-  -webkit-box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1), 0 8px 16px rgba(255, 255, 255, 0.1);
-          box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1), 0 8px 16px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1), 0 8px 16px rgba(255, 255, 255, 0.1);
 }
 
-body .section1 .box h1 {
+body h1 {
   color: white;
   font-weight: 900;
   font-size: 35px;
 }
 
-body .section1 .box .main-form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+body section {
   height: 100%;
   width: 100%;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  background-color: #041b2d;
 }
 
-body .section1 .box .main-form label {
+body label {
   color: white;
   font-weight: 700;
   font-size: 17px;
@@ -98,7 +166,7 @@ body .section1 .box .main-form label {
   margin-top: 10px;
 }
 
-body .section1 .box .main-form input {
+body input {
   width: 100%;
   height: 45px;
   padding: 10px 20px;
@@ -110,48 +178,25 @@ body .section1 .box .main-form input {
   color: #041b2d;
 }
 
-body .section1 .box .main-form input:focus {
+body input:focus {
   border: 2px solid #041b2d;
 }
 
-body .section1 .box .main-form .selects {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
+body .main-form {
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-}
-
-body .section1 .box .main-form .selects select {
-  height: 45px;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
   width: 100%;
-  margin-right: 10px;
-  border-radius: 8px;
-  border: 1px solid #041b2d;
-  outline: none;
-  background-color: white;
+  align-items: flex-start;
 }
 
-body .section1 .box .main-form .selects select:nth-child(3) {
-  margin-right: 0px;
-}
-
-body .section1 .box .main-form input[type="submit"] {
+body input[type="submit"] {
   margin-top: 10px;
   height: 50px;
   width: 40%;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  align-self: center;
   background-color: #ea4492;
   outline: none;
   border: none;
@@ -159,12 +204,96 @@ body .section1 .box .main-form input[type="submit"] {
   font-weight: 900;
   font-size: 17px;
   cursor: pointer;
-  -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
 }
 
-body .section1 .box .main-form input[type="submit"]:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+body input[type="submit"]:hover {
+  transform: scale(1.1);
 }
-/*# sourceMappingURL=styles.css.map */
+
+body select {
+  height: 45px;
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid #041b2d;
+  outline: none;
+  background-color: white;
+  padding: 10px 10px;
+}
+
+body .student-section .selects {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+body .student-section .selects select {
+  height: 45px;
+  width: 100%;
+  margin-right: 10px;
+  border-radius: 8px;
+  border: 1px solid #041b2d;
+  outline: none;
+  background-color: white;
+  padding: 10px 10px;
+}
+
+body .student-section .selects select:nth-child(3) {
+  margin-right: 0px;
+}
+
+body .instructor-section {
+  display: none;
+}
+
+body .instructor-section h1 {
+  margin-bottom: 20px;
+}
+
+body .instructor-section input[type="submit"] {
+  margin-top: 30px;
+}
+
+body .subjects-section {
+  display: none;
+}
+
+body .subjects-section h1 {
+  margin-bottom: 20px;
+}
+
+body .subjects-section input[type="submit"] {
+  margin-top: 30px;
+}
+
+body .grades-section {
+  display: none;
+}
+
+body .grades-section .grades {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+body .grades-section .grades .gradebox {
+  width: 100%;
+  margin-right: 10px;
+  margin-top: 15px;
+}
+
+body .grades-section .grades .gradebox:nth-child(3) {
+  margin-right: 0px;
+}
+
+body .grades-section h1 {
+  margin-bottom: 20px;
+}
+
+body .grades-section input[type="submit"] {
+  margin-top: 30px;
+}

@@ -34,7 +34,7 @@ router.post("/add", async (req, res) => {
       message: "Student Created",
     });
   } else {
-    res.status(500).send({
+    res.send({
       status: results,
       message: "Student Not Created",
     });

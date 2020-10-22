@@ -3,46 +3,260 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Form</title>
+    <title>Student</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+      integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="./public/styles.css" />
   </head>
   <body>
-    <section class="section1">
+    <nav class="navbar">
+      <div class="box-logo">
+        <h1 class="logo-text">Forms</h1>
+        <i class="fab fa-github-alt logo icon"></i>
+      </div>
+      <ul class="nav">
+        <li class="nav-items" id="student">
+          <i class="fas fa-user-alt icon"></i>
+          <p class="navtext">Students</p>
+        </li>
+        <li class="nav-items" id="instructor">
+          <i class="fas fa-user-tie icon"></i>
+          <p class="navtext">Instructor</p>
+        </li>
+        <li class="nav-items" id="subjects">
+          <i class="fas fa-book icon"></i>
+          <p class="navtext">Subjects</p>
+        </li>
+        <li class="nav-items" id="grades">
+          <i class="fas fa-chart-line icon"></i>
+          <p class="navtext">Grades</p>
+        </li>
+        <li class="nav-items" id="tables">
+          <i class="fas fa-list icon"></i>
+          <p class="navtext">Tables</p>
+        </li>
+      </ul>
+    </nav>
+
+    <section id="student-section" class="student-section">
       <main class="container">
         <div class="box">
           <h1>Students</h1>
-          <form class="main-form" action="/student/add" method="POST">
+          <form class="main-form" id="studentform" method="POST">
             <label for="fname"> First Name </label>
-            <input name="fname" type="text" placeholder="First Name" />
+            <input
+              id="fname"
+              name="fname"
+              type="text"
+              placeholder="First Name"
+            />
             <label for="mname"> Middle Name </label>
-            <input name="mname" type="text" placeholder="Middle Name" />
+            <input
+              id="mname"
+              name="mname"
+              type="text"
+              placeholder="Middle Name"
+            />
             <label for="lname"> Last Name </label>
-            <input name="lname" type="text" placeholder="Last Name" />
+            <input
+              id="lname"
+              name="lname"
+              type="text"
+              placeholder="Last Name"
+            />
             <label for="number"> Phone Number </label>
-            <input name="number" type="number" placeholder="Phone Number" />
+            <input
+              id="number"
+              name="number"
+              type="number"
+              placeholder="Phone Number"
+            />
             <label for="address"> Address </label>
-            <input name="address" type="text" placeholder="Address" />
+            <input
+              id="address"
+              name="address"
+              type="text"
+              placeholder="Address"
+            />
             <label for="selects">Course & Section</label>
             <div name="selects" class="selects">
-              <select name="course" id="course">
+              <select id="course" name="course" id="course">
                 <option value="BSIT">BSIT</option>
                 <option value="BSCS">BSCS</option>
               </select>
-              <select name="college" id="college">
+              <select id="college" name="college" id="college">
                 <option value="CCIT">CCIT</option>
               </select>
-              <select name="section" id="section">
+              <select id="section" name="section" id="section">
                 <option value="3A">3A</option>
                 <option value="3B">3B</option>
                 <option value="3C">3C</option>
               </select>
             </div>
             <label for="studentid"> Student ID </label>
-            <input name="studentid" type="number" placeholder="Student ID" />
+            <input
+              id="studentid"
+              name="studentid"
+              type="number"
+              placeholder="Student ID"
+            />
             <input type="submit" value="Submit" />
           </form>
         </div>
       </main>
     </section>
+
+    <section id="instructor-section" class="instructor-section">
+      <main class="container">
+        <div class="box">
+          <h1>Instructors</h1>
+          <form class="main-form" id="instructorform" method="POST">
+            <label for="fname-instructor"> First Name </label>
+            <input
+              id="fname-instructor"
+              name="fname-instructor"
+              type="text"
+              placeholder="First Name"
+            />
+            <label for="lname-instructor"> Last Name </label>
+            <input
+              id="lname-instructor"
+              name="lname-instructor"
+              type="text"
+              placeholder="Last Name"
+            />
+            <label for="college-instructor">College</label>
+            <select
+              id="college-instructor"
+              name="college-instructor"
+              id="college-instructor"
+            >
+              <option value="CCIT">CCIT</option>
+            </select>
+            <label for="instructorid"> Instructor ID </label>
+            <input
+              id="instructorid"
+              name="instructorid"
+              type="number"
+              placeholder="Instructor ID"
+            />
+            <input type="submit" value="Submit" />
+          </form>
+        </div>
+      </main>
+    </section>
+
+    <section id="subjects-section" class="subjects-section">
+      <main class="container">
+        <div class="box">
+          <h1>Subjects</h1>
+          <form class="main-form" id="subjectform" method="POST">
+            <label for="subjectcode"> Subject Code </label>
+            <input
+              id="subjectcode"
+              name="subjectcode"
+              type="text"
+              placeholder="Subject Code"
+            />
+            <label for="subjectdescription"> Subject Description </label>
+            <input
+              id="subjectdescription"
+              name="subjectdescription"
+              type="text"
+              placeholder="Subject Description"
+            />
+            <label for="schedule"> Schedule </label>
+            <input
+              id="schedule"
+              name="schedule"
+              type="text"
+              placeholder="Schedule"
+            />
+
+            <label for="subjectid"> Subject ID </label>
+            <input
+              id="subjectid"
+              name="subjectid"
+              type="text"
+              placeholder="Subject ID"
+            />
+            <input type="submit" value="Submit" />
+          </form>
+        </div>
+      </main>
+    </section>
+
+    <section id="grades-section" class="grades-section">
+      <main class="container">
+        <div class="box">
+          <h1>Grades</h1>
+          <form class="main-form" id="gradesform" method="POST">
+            <label for="studentid">Student ID</label>
+            <select id="studentid" name="studentid" id="studentid">
+              <option value="CCIT">09283729372</option>
+            </select>
+            <label for="subjectid">Subject ID</label>
+            <select id="subjectid" name="subjectid" id="subjectid">
+              <option value="CCIT">M147</option>
+            </select>
+            <label for="instructorid">Instructor ID</label>
+            <select id="instructorid" name="instructorid" id="instructorid">
+              <option value="CCIT">2903812837</option>
+            </select>
+            <div class="grades">
+              <div class="gradebox">
+                <label for="midterm"> Midterm </label>
+                <input
+                  id="midterm"
+                  name="midterm"
+                  type="text"
+                  placeholder="Midterm Grade"
+                />
+              </div>
+              <div class="gradebox">
+                <label for="final"> Final </label>
+                <input
+                  id="final"
+                  name="final"
+                  type="text"
+                  placeholder="Final Grade"
+                />
+              </div>
+              <div class="gradebox">
+                <label for="remarks"> Remarks </label>
+                <input
+                  id="remarks"
+                  name="remarks"
+                  type="text"
+                  placeholder="Remarks"
+                />
+              </div>
+            </div>
+            <label for="semester"> Semester </label>
+            <input
+              id="semester"
+              name="semester"
+              type="text"
+              placeholder="Semester"
+            />
+            <label for="schoolyear"> School Year </label>
+            <input
+              id="schoolyear"
+              name="schoolyear"
+              type="text"
+              placeholder="School Year"
+            />
+            <input type="submit" value="Submit" />
+          </form>
+        </div>
+      </main>
+    </section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./public/main.js"></script>
   </body>
 </html>
