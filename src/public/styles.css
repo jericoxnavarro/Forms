@@ -396,29 +396,6 @@ body .table-section .container table tbody tr:hover {
   background-color: #e0dbdb;
 }
 
-body .table-section .container .pagination {
-  height: 40px;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  margin-top: 10px;
-}
-
-body .table-section .container .pagination .num {
-  outline: none;
-  border: none;
-  height: 100%;
-  width: 40px;
-  background-color: #418cd4;
-  cursor: pointer;
-  color: white;
-  margin-right: 5px;
-}
-
-body .table-section .container .pagination .num:hover {
-  background-color: #ff9cda;
-}
-
 body .table-section .container .instructors-table {
-  display: none;
+  display: block;
 }

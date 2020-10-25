@@ -95,3 +95,18 @@ gradesNav.addEventListener("click", () => {
   document.getElementById("subjects-section").style.display = "none";
   document.getElementById("grades-section").style.display = "block";
 });
+
+const studenttable = document.getElementById("student-btn");
+const instructortable = document.getElementById("instructor-btn");
+const subjecttable = document.getElementById("subject-btn");
+const gradetable = document.getElementById("grade-btn");
+
+studenttable.addEventListener("click", () => {
+  document.getElementById("instructors-table").style.display = "none";
+  document.getElementById("students-table").style.display = "block";
+});
+
+instructortable.addEventListener("click", () => {
+  document.getElementById("students-table").style.display = "none";
+  document.getElementById("instructors-table").style.display = "block";
+});

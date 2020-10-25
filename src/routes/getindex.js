@@ -29,6 +29,7 @@ router.get("/", async (req, res) => {
       student: results[0],
       subject: results[1],
       instructor: results[2],
+      grade: results[3],
     });
   });
   connection.end();

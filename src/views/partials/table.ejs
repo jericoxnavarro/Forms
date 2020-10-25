@@ -1,0 +1,92 @@
+<section id="table-section" class="table-section">
+  <main class="container">
+    <h1>Tables</h1>
+    <div class="btn-tables">
+      <button id="student-btn">Students</button>
+      <button id="instructor-btn">Instructor</button>
+      <button id="subject-btn">Subjects</button>
+      <button id="grade-btn">Grades</button>
+    </div>
+    <div class="students-table" id="students-table">
+      <table>
+        <thead>
+          <tr class="tr-head">
+            <th>Fullname</th>
+            <th>Phone number</th>
+            <th>Address</th>
+            <th>Education</th>
+            <th>Student ID</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% student.forEach(function (students) { %>
+          <tr class="tr-body">
+            <td><%= students.f_name, students.m_name, students.l_name %></td>
+            <td><%= students.phone_number %></td>
+            <td><%= students.address %></td>
+            <td><%= students.college, students.course, students.section %></td>
+            <td><%= students.student_id %></td>
+          </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="instructors-table" id="instructors-table">
+      <table>
+        <thead>
+          <tr class="tr-head">
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>College</th>
+            <th>Instructor ID</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="tr-body">
+            <td>Jerico</td>
+            <td>Navarro</td>
+            <td>CCIT</td>
+            <td>00097263726</td>
+          </tr>
+          <tr class="tr-body">
+            <td>Jerico</td>
+            <td>Navarro</td>
+            <td>CCIT</td>
+            <td>00097263726</td>
+          </tr>
+          <tr class="tr-body">
+            <td>Jerico</td>
+            <td>Navarro</td>
+            <td>CCIT</td>
+            <td>00097263726</td>
+          </tr>
+          <tr class="tr-body">
+            <td>Jerico</td>
+            <td>Navarro</td>
+            <td>CCIT</td>
+            <td>00097263726</td>
+          </tr>
+          <tr class="tr-body">
+            <td>Jerico</td>
+            <td>Navarro</td>
+            <td>CCIT</td>
+            <td>00097263726</td>
+          </tr>
+          <tr class="tr-body">
+            <td>Jerico</td>
+            <td>Navarro</td>
+            <td>CCIT</td>
+            <td>00097263726</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="pagination">
+        <button class="num">1</button>
+        <button class="num">2</button>
+        <button class="num">3</button>
+        <button class="num">4</button>
+      </div>
+    </div>
+  </main>
+</section>
