@@ -5,6 +5,7 @@
       <form class="main-form" id="instructorform" method="POST">
         <label for="fname-instructor"> First Name </label>
         <input
+          required
           id="fname-instructor"
           name="fname-instructor"
           type="text"
@@ -12,6 +13,7 @@
         />
         <label for="lname-instructor"> Last Name </label>
         <input
+          required
           id="lname-instructor"
           name="lname-instructor"
           type="text"
@@ -27,12 +29,13 @@
         </select>
         <label for="instructorid"> Instructor ID </label>
         <input
+          required
           id="instructorid"
           name="instructorid"
           type="number"
           placeholder="Instructor ID"
         />
-        <input type="submit" value="Submit" />
+        <input required type="submit" value="Submit" />
       </form>
     </div>
   </main>

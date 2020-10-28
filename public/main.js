@@ -74,6 +74,31 @@ studentNav.addEventListener("click", () => {
   document.getElementById("subjects-section").style.display = "none";
   document.getElementById("instructor-section").style.display = "none";
   document.getElementById("student-section").style.display = "block";
+
+  document.getElementById("navbar").style.backgroundColor = "#2b3d4a";
+  document.getElementById("nav").style.color = "#ffffff";
+  let icon = document.getElementsByClassName("icon");
+  for (var i = 1; i < icon.length; i++) {
+    icon[i].style.color = "#ffffff";
+  }
+
+  studentNav.style.backgroundColor = "#ffffff";
+  instructorNav.style.backgroundColor = "#2b3d4a";
+  subjectsNav.style.backgroundColor = "#2b3d4a";
+  gradesNav.style.backgroundColor = "#2b3d4a";
+  tablesNav.style.backgroundColor = "#2b3d4a";
+
+  instructorNav.style.color = "#ffffff";
+  subjectsNav.style.color = "#ffffff";
+  gradesNav.style.color = "#ffffff";
+  tablesNav.style.color = "#ffffff";
+  studentNav.style.color = "#2b3d4a";
+
+  icon[1].style.color = "#2b3d4a";
+  icon[2].style.color = "#ffffff";
+  icon[3].style.color = "#ffffff";
+  icon[4].style.color = "#ffffff";
+  icon[5].style.color = "#ffffff";
 });
 
 instructorNav.addEventListener("click", () => {
@@ -82,6 +107,31 @@ instructorNav.addEventListener("click", () => {
   document.getElementById("subjects-section").style.display = "none";
   document.getElementById("student-section").style.display = "none";
   document.getElementById("instructor-section").style.display = "block";
+
+  document.getElementById("navbar").style.backgroundColor = "#ffffff";
+  document.getElementById("nav").style.color = "#2b3d4a";
+  let icon = document.getElementsByClassName("icon");
+  for (var i = 0; i < icon.length; i++) {
+    icon[i].style.color = "#2b3d4a";
+  }
+
+  studentNav.style.backgroundColor = "#ffffff";
+  instructorNav.style.backgroundColor = "#2b3d4a";
+  subjectsNav.style.backgroundColor = "#ffffff";
+  gradesNav.style.backgroundColor = "#ffffff";
+  tablesNav.style.backgroundColor = "#ffffff";
+
+  studentNav.style.color = "#2b3d4a";
+  subjectsNav.style.color = "#2b3d4a";
+  gradesNav.style.color = "#2b3d4a";
+  tablesNav.style.color = "#2b3d4a";
+  instructorNav.style.color = "#ffffff";
+
+  icon[1].style.color = "#2b3d4a";
+  icon[2].style.color = "#ffffff";
+  icon[3].style.color = "#2b3d4a";
+  icon[4].style.color = "#2b3d4a";
+  icon[5].style.color = "#2b3d4a";
 });
 
 subjectsNav.addEventListener("click", () => {
@@ -90,6 +140,31 @@ subjectsNav.addEventListener("click", () => {
   document.getElementById("instructor-section").style.display = "none";
   document.getElementById("student-section").style.display = "none";
   document.getElementById("subjects-section").style.display = "block";
+
+  document.getElementById("navbar").style.backgroundColor = "#2b3d4a";
+  document.getElementById("nav").style.color = "#ffffff";
+  let icon = document.getElementsByClassName("icon");
+  for (var i = 1; i < icon.length; i++) {
+    icon[i].style.color = "#ffffff";
+  }
+
+  studentNav.style.backgroundColor = "#2b3d4a";
+  instructorNav.style.backgroundColor = "#2b3d4a";
+  subjectsNav.style.backgroundColor = "#ffffff";
+  gradesNav.style.backgroundColor = "#2b3d4a";
+  tablesNav.style.backgroundColor = "#2b3d4a";
+
+  instructorNav.style.color = "#ffffff";
+  subjectsNav.style.color = "#2b3d4a";
+  gradesNav.style.color = "#ffffff";
+  tablesNav.style.color = "#ffffff";
+  studentNav.style.color = "#ffffff";
+
+  icon[1].style.color = "#ffffff";
+  icon[2].style.color = "#ffffff";
+  icon[3].style.color = "#2b3d4a";
+  icon[4].style.color = "#ffffff";
+  icon[5].style.color = "#ffffff";
 });
 
 gradesNav.addEventListener("click", () => {
@@ -98,6 +173,31 @@ gradesNav.addEventListener("click", () => {
   document.getElementById("subjects-section").style.display = "none";
   document.getElementById("table-section").style.display = "none";
   document.getElementById("grades-section").style.display = "block";
+
+  document.getElementById("navbar").style.backgroundColor = "#ffffff";
+  document.getElementById("nav").style.color = "#2b3d4a";
+  let icon = document.getElementsByClassName("icon");
+  for (var i = 0; i < icon.length; i++) {
+    icon[i].style.color = "#2b3d4a";
+  }
+
+  studentNav.style.backgroundColor = "#ffffff";
+  instructorNav.style.backgroundColor = "#ffffff";
+  subjectsNav.style.backgroundColor = "#ffffff";
+  gradesNav.style.backgroundColor = "#2b3d4a";
+  tablesNav.style.backgroundColor = "#ffffff";
+
+  studentNav.style.color = "#2b3d4a";
+  subjectsNav.style.color = "#2b3d4a";
+  tablesNav.style.color = "#2b3d4a";
+  instructorNav.style.color = "#2b3d4a";
+  gradesNav.style.color = "#ffffff";
+
+  icon[1].style.color = "#2b3d4a";
+  icon[2].style.color = "#2b3d4a";
+  icon[3].style.color = "#2b3d4a";
+  icon[4].style.color = "#ffffff";
+  icon[5].style.color = "#2b3d4a";
 });
 
 tablesNav.addEventListener("click", () => {
@@ -106,6 +206,31 @@ tablesNav.addEventListener("click", () => {
   document.getElementById("subjects-section").style.display = "none";
   document.getElementById("grades-section").style.display = "none";
   document.getElementById("table-section").style.display = "block";
+
+  document.getElementById("navbar").style.backgroundColor = "#2b3d4a";
+  document.getElementById("nav").style.color = "#ffffff";
+  let icon = document.getElementsByClassName("icon");
+  for (var i = 1; i < icon.length; i++) {
+    icon[i].style.color = "#ffffff";
+  }
+
+  studentNav.style.backgroundColor = "#2b3d4a";
+  instructorNav.style.backgroundColor = "#2b3d4a";
+  subjectsNav.style.backgroundColor = "#2b3d4a";
+  gradesNav.style.backgroundColor = "#2b3d4a";
+  tablesNav.style.backgroundColor = "#ffffff";
+
+  instructorNav.style.color = "#ffffff";
+  subjectsNav.style.color = "#ffffff";
+  gradesNav.style.color = "#ffffff";
+  tablesNav.style.color = "#2b3d4a";
+  studentNav.style.color = "#ffffff";
+
+  icon[1].style.color = "#ffffff";
+  icon[2].style.color = "#ffffff";
+  icon[3].style.color = "#ffffff";
+  icon[4].style.color = "#ffffff";
+  icon[5].style.color = "#2b3d4a";
 });
 
 const studenttable = document.getElementById("student-btn");
@@ -119,10 +244,14 @@ studenttable.addEventListener("click", () => {
   document.getElementById("subjects-table").style.display = "none";
   document.getElementById("students-table").style.display = "block";
 
-  instructortable.style.backgroundColor = "#418cd4";
-  subjecttable.style.backgroundColor = "#418cd4";
-  gradetable.style.backgroundColor = "#418cd4";
-  studenttable.style.backgroundColor = "#ff9cda";
+  instructortable.style.backgroundColor = "#2b3d4a";
+  subjecttable.style.backgroundColor = "#2b3d4a";
+  gradetable.style.backgroundColor = "#2b3d4a";
+  studenttable.style.backgroundColor = "#ebebeb";
+  subjecttable.style.color = "#ffffff";
+  gradetable.style.color = "#ffffff";
+  instructortable.style.color = "#ffffff";
+  studenttable.style.color = "#2b3d4a";
 });
 
 instructortable.addEventListener("click", () => {
@@ -131,10 +260,14 @@ instructortable.addEventListener("click", () => {
   document.getElementById("subjects-table").style.display = "none";
   document.getElementById("instructors-table").style.display = "block";
 
-  instructortable.style.backgroundColor = "#ff9cda";
-  subjecttable.style.backgroundColor = "#418cd4";
-  gradetable.style.backgroundColor = "#418cd4";
-  studenttable.style.backgroundColor = "#418cd4";
+  studenttable.style.backgroundColor = "#2b3d4a";
+  subjecttable.style.backgroundColor = "#2b3d4a";
+  gradetable.style.backgroundColor = "#2b3d4a";
+  instructortable.style.backgroundColor = "#ebebeb";
+  subjecttable.style.color = "#ffffff";
+  gradetable.style.color = "#ffffff";
+  studenttable.style.color = "#ffffff";
+  instructortable.style.color = "#2b3d4a";
 });
 
 subjecttable.addEventListener("click", () => {
@@ -143,10 +276,14 @@ subjecttable.addEventListener("click", () => {
   document.getElementById("instructors-table").style.display = "none";
   document.getElementById("subjects-table").style.display = "block";
 
-  instructortable.style.backgroundColor = "#418cd4";
-  subjecttable.style.backgroundColor = "#ff9cda";
-  gradetable.style.backgroundColor = "#418cd4";
-  studenttable.style.backgroundColor = "#418cd4";
+  instructortable.style.backgroundColor = "#2b3d4a";
+  studenttable.style.backgroundColor = "#2b3d4a";
+  gradetable.style.backgroundColor = "#2b3d4a";
+  subjecttable.style.backgroundColor = "#ebebeb";
+  instructortable.style.color = "#ffffff";
+  gradetable.style.color = "#ffffff";
+  studenttable.style.color = "#ffffff";
+  subjecttable.style.color = "#2b3d4a";
 });
 
 gradetable.addEventListener("click", () => {
@@ -155,10 +292,14 @@ gradetable.addEventListener("click", () => {
   document.getElementById("instructors-table").style.display = "none";
   document.getElementById("grades-table").style.display = "block";
 
-  instructortable.style.backgroundColor = "#418cd4";
-  subjecttable.style.backgroundColor = "#418cd4";
-  gradetable.style.backgroundColor = "#ff9cda";
-  studenttable.style.backgroundColor = "#418cd4";
+  instructortable.style.backgroundColor = "#2b3d4a";
+  subjecttable.style.backgroundColor = "#2b3d4a";
+  studenttable.style.backgroundColor = "#2b3d4a";
+  gradetable.style.backgroundColor = "#ebebeb";
+  instructortable.style.color = "#ffffff";
+  subjecttable.style.color = "#ffffff";
+  studenttable.style.color = "#ffffff";
+  gradetable.style.color = "#2b3d4a";
 });
 
 function getTableStudent(event) {

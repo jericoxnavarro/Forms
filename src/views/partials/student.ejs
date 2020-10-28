@@ -4,20 +4,45 @@
       <h1>Students</h1>
       <form class="main-form" id="studentform" method="POST">
         <label for="fname"> First Name </label>
-        <input id="fname" name="fname" type="text" placeholder="First Name" />
+        <input
+          required
+          id="fname"
+          name="fname"
+          type="text"
+          placeholder="First Name"
+        />
         <label for="mname"> Middle Name </label>
-        <input id="mname" name="mname" type="text" placeholder="Middle Name" />
+        <input
+          required
+          id="mname"
+          name="mname"
+          type="text"
+          placeholder="Middle Name"
+        />
         <label for="lname"> Last Name </label>
-        <input id="lname" name="lname" type="text" placeholder="Last Name" />
+        <input
+          required
+          id="lname"
+          name="lname"
+          type="text"
+          placeholder="Last Name"
+        />
         <label for="number"> Phone Number </label>
         <input
+          required
           id="number"
           name="number"
           type="number"
           placeholder="Phone Number"
         />
         <label for="address"> Address </label>
-        <input id="address" name="address" type="text" placeholder="Address" />
+        <input
+          required
+          id="address"
+          name="address"
+          type="text"
+          placeholder="Address"
+        />
         <label for="selects">Course & Section</label>
         <div name="selects" class="selects">
           <select id="course" name="course" id="course">
@@ -35,12 +60,13 @@
         </div>
         <label for="studentid"> Student ID </label>
         <input
+          required
           id="studentid"
           name="studentid"
           type="number"
           placeholder="Student ID"
         />
-        <input type="submit" value="Submit" />
+        <input required type="submit" value="Submit" />
       </form>
     </div>
   </main>
