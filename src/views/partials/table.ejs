@@ -8,85 +8,172 @@
       <button id="grade-btn">Grades</button>
     </div>
     <div class="students-table" id="students-table">
-      <table>
+      <table id="table-students">
         <thead>
           <tr class="tr-head">
+            <th>ID</th>
             <th>Fullname</th>
             <th>Phone number</th>
             <th>Address</th>
-            <th>Education</th>
+            <th>College</th>
+            <th>Course</th>
+            <th>Section</th>
             <th>Student ID</th>
           </tr>
         </thead>
-        <tbody>
-          <% student.forEach(function (students) { %>
+        <tbody id="tbody-students">
+          <% for(let i = 0; i < 6;i++) { %>
           <tr class="tr-body">
-            <td><%= students.f_name, students.m_name, students.l_name %></td>
-            <td><%= students.phone_number %></td>
-            <td><%= students.address %></td>
-            <td><%= students.college, students.course, students.section %></td>
-            <td><%= students.student_id %></td>
+            <td><%= student[i]._id %></td>
+            <td>
+              <%= student[i].f_name %> <%= student[i].m_name %> <%=
+              student[i].l_name %>
+            </td>
+            <td><%= student[i].phone_number %></td>
+            <td><%= student[i].address %></td>
+            <td><%= student[i].college %></td>
+            <td><%= student[i].course %></td>
+            <td><%= student[i].section %></td>
+            <td><%= student[i].student_id %></td>
           </tr>
-          <% }) %>
+          <% } %>
         </tbody>
       </table>
+      <div class="pagination">
+        <% for(let i = 0; i < Math.ceil(student.length / 6);i++) { %>
+        <button
+          class="num"
+          value="<%= i + 1 %>"
+          onclick="getTableStudent(this.value)"
+        >
+          <%= i + 1 %>
+        </button>
+        <% } %>
+      </div>
     </div>
 
     <div class="instructors-table" id="instructors-table">
       <table>
         <thead>
           <tr class="tr-head">
+            <th>ID</th>
             <th>Firstname</th>
             <th>Lastname</th>
             <th>College</th>
             <th>Instructor ID</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody id="tbody-instructors">
+          <% for(let i = 0; i < 6;i++) { %>
           <tr class="tr-body">
-            <td>Jerico</td>
-            <td>Navarro</td>
-            <td>CCIT</td>
-            <td>00097263726</td>
+            <td><%= instructor[i]._id %></td>
+            <td><%= instructor[i].f_name %></td>
+            <td><%= instructor[i].l_name %></td>
+            <td><%= instructor[i].college %></td>
+            <td><%= instructor[i].instructor_id %></td>
           </tr>
-          <tr class="tr-body">
-            <td>Jerico</td>
-            <td>Navarro</td>
-            <td>CCIT</td>
-            <td>00097263726</td>
-          </tr>
-          <tr class="tr-body">
-            <td>Jerico</td>
-            <td>Navarro</td>
-            <td>CCIT</td>
-            <td>00097263726</td>
-          </tr>
-          <tr class="tr-body">
-            <td>Jerico</td>
-            <td>Navarro</td>
-            <td>CCIT</td>
-            <td>00097263726</td>
-          </tr>
-          <tr class="tr-body">
-            <td>Jerico</td>
-            <td>Navarro</td>
-            <td>CCIT</td>
-            <td>00097263726</td>
-          </tr>
-          <tr class="tr-body">
-            <td>Jerico</td>
-            <td>Navarro</td>
-            <td>CCIT</td>
-            <td>00097263726</td>
-          </tr>
+          <% } %>
         </tbody>
       </table>
       <div class="pagination">
-        <button class="num">1</button>
-        <button class="num">2</button>
-        <button class="num">3</button>
-        <button class="num">4</button>
+        <% for(let i = 0; i < Math.ceil(instructor.length / 6);i++) { %>
+        <button
+          class="num"
+          value="<%= i + 1 %>"
+          onclick="getTableInstructor(this.value)"
+        >
+          <%= i + 1 %>
+        </button>
+        <% } %>
+      </div>
+    </div>
+
+    <div class="subjects-table" id="subjects-table">
+      <table>
+        <thead>
+          <tr class="tr-head">
+            <th>ID</th>
+            <th>Code</th>
+            <th>Description</th>
+            <th>Schedule</th>
+            <th>Subject ID</th>
+          </tr>
+        </thead>
+        <tbody id="tbody-subjects">
+          <% for(let i = 0; i < 6;i++) { %>
+          <tr class="tr-body">
+            <td><%= subject[i]._id %></td>
+            <td><%= subject[i].subject_code %></td>
+            <td><%= subject[i].subject_description %></td>
+            <td><%= subject[i].schedule %></td>
+            <td><%= subject[i].subject_id %></td>
+          </tr>
+          <% } %>
+        </tbody>
+      </table>
+      <div class="pagination">
+        <% for(let i = 0; i < Math.ceil(subject.length / 6);i++) { %>
+        <button
+          class="num"
+          value="<%= i + 1 %>"
+          onclick="getTableSubjects(this.value)"
+        >
+          <%= i + 1 %>
+        </button>
+        <% } %>
+      </div>
+    </div>
+
+    <div class="grades-table" id="grades-table">
+      <table>
+        <thead>
+          <tr class="tr-head">
+            <th>Student ID</th>
+            <th>Subject ID</th>
+            <th>Instructor ID</th>
+            <th>MG</th>
+            <th>FG</th>
+            <th>Remarks</th>
+            <th>Semester</th>
+            <th>School Year</th>
+          </tr>
+        </thead>
+        <tbody id="tbody-grades">
+          <% for(let i = 0; i < 6;i++) { %>
+          <tr class="tr-body">
+            <td><%= grade[i].student_id %></td>
+            <td><%= grade[i].subject_id %></td>
+            <td><%= grade[i].instructor_id %></td>
+            <td><%= grade[i].mg %></td>
+            <td><%= grade[i].fg %></td>
+            <td><%= grade[i].remarks %></td>
+            <td><%= grade[i].semester %></td>
+            <td><%= grade[i].school_year %></td>
+          </tr>
+          <% } %>
+        </tbody>
+      </table>
+      <div class="pagination">
+        <% for(let i = 0; i < Math.ceil(grade.length / 6);i++) { %>
+        <button
+          class="num"
+          value="<%= i + 1 %>"
+          onclick="getTableGrades(this.value)"
+        >
+          <%= i + 1 %>
+        </button>
+        <% } %>
       </div>
     </div>
   </main>
+  <script>
+    let studentss = <%- JSON.stringify(student) %>;
+    localStorage.setItem("localStudent", JSON.stringify(studentss));
+    let subjectss = <%- JSON.stringify(subject) %>;
+    localStorage.setItem("localSubject", JSON.stringify(subjectss));
+    let instructorss = <%- JSON.stringify(instructor) %>;
+    localStorage.setItem("localInstructor", JSON.stringify(instructorss));
+    let gradess = <%- JSON.stringify(grade) %>;
+    localStorage.setItem("localGrade", JSON.stringify(gradess));
+  </script>
 </section>
